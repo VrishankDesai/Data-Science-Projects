@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Diamond Price Prediction</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin: 40px;
+}
+
+input{
+margin:5px;
+padding:5px;
+}
+
+button{
+padding:5px 15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h2>This is the Diamond Price Prediction Model</h2>
+
+<p>Enter values as mentioned:</p>
+
+<form action="/predict" method="post">
+
+<input type="text" name="carat" placeholder="Carat">
+<input type="text" name="depth" placeholder="Depth">
+<input type="text" name="table" placeholder="Table">
+<input type="text" name="x" placeholder="Length (x)">
+<input type="text" name="y" placeholder="Width (y)">
+<input type="text" name="z" placeholder="Depth (z)">
+
+<button type="submit">Submit</button>
+
+</form>
+
+<br>
+
+<h3>Predicted Price:</h3>
+
+<p style="color:red">{{ prediction_text }}</p>
+
+</body>
+
+</html>
