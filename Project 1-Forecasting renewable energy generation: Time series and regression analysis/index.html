@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Renewable Energy Forecast</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+text-align:center;
+}
+
+input{
+padding:8px;
+margin:10px;
+}
+
+button{
+padding:8px 20px;
+background:#444;
+color:white;
+border:none;
+}
+
+img{
+margin-top:30px;
+width:70%;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Renewable Energy Generation Prediction</h1>
+
+<p>Please enter a time frame</p>
+
+<form action="/predict" method="post">
+
+<label>From Year:</label>
+
+<input type="number" name="start_year" placeholder="2005">
+
+<br>
+
+<label>To Year:</label>
+
+<input type="number" name="end_year" placeholder="2020">
+
+<br><br>
+
+<button type="submit">Submit</button>
+
+</form>
+
+{% if graph %}
+
+<img src="{{graph}}">
+
+{% endif %}
+
+</body>
+
+</html>
